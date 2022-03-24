@@ -20,14 +20,54 @@ window.addEventListener('load',onLoad);
 
 function onLoad(){
   console.log('hi')
+  createUsers();
 }
 
 
-var user = { name: usuario1, country: spain, money: 199, premiumAccount: true }
-var user2 = { name: usuario2, country: france, money: 0, premiumAccount: false }
-var user3 = { name: usuario3, country: spain, money: 537, premiumAccount: false }
-var user3 = { name: usuario4, country: italy, money: 1004, premiumAccount: true }
-var user3 = { name: usuario5, country: spain, money: 250, premiumAccount: false }
-var user3 = { name: usuario6, country: ireland, money: 799, premiumAccount: true }
-var user3 = { name: usuario7, country: spain, money: 3345, premiumAccount: false }
+
+var lits_users = [];
+var list_users_filter = [];
+
+function createUsers() {
+
+  let array = [];
+
+  let user =  { name: 'usuario1', country: 'spain', money: 199, premiumAccount: true }
+  let user2 = { name: 'usuario', country: 'france', money: 0, premiumAccount: false }
+  let user3 = { name: 'usuario3', country: 'spain', money: 537, premiumAccount: false }
+  let user4 = { name: 'usuario4', country: 'italy', money: 1004, premiumAccount: true }
+  let user5 = { name: 'usuario5', country: 'spain', money: 250, premiumAccount: false }
+  let user6 = { name: 'usuario6', country: 'ireland', money: 799, premiumAccount: true }
+  let user7 = { name: 'usuario7', country: 'spain', money: 3345, premiumAccount: false }
+
+  array.push(user);
+  array.push(user2);
+  array.push(user3);
+  array.push(user4);
+  array.push(user5);
+  array.push(user6);
+  array.push(user7);
+
+  lits_users = array;
+
+  console.log("Lista de usuarios sin filtrar");
+  console.log(lits_users);
+
+  list_users_filter = array.filter(filterUsers)
+
+  console.log("Lista de usuarios filtrado por pais y cantidad de dinero");
+  console.log(list_users_filter);
+
+}
+
+function filterUsers(user) {
+
+  if ( user.country == "spain" && user.money > 200) {
+    return user;
+  }
+ 
+  return null;
+}
+
+
 
