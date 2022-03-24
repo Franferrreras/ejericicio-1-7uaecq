@@ -21,3 +21,13 @@ window.addEventListener('load',onLoad);
 function onLoad(){
   console.log('hi')
 }
+
+
+var user = { name: usuario1, country: spain, money: 199, premiumAccount: true }
+var user2 = { name: usuario2, country: france, money: 0, premiumAccount: false }
+var user3 = { name: usuario3, country: spain, money: 537, premiumAccount: false }
+var user3 = { name: usuario4, country: italy, money: 1004, premiumAccount: true }
+var user3 = { name: usuario5, country: spain, money: 250, premiumAccount: false }
+var user3 = { name: usuario6, country: ireland, money: 799, premiumAccount: true }
+var user3 = { name: usuario7, country: spain, money: 3345, premiumAccount: false }
+
